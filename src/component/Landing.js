@@ -1,12 +1,17 @@
 import { Button, Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import SearchHospitals from "./SearchHospitals";
+import MyLocation from "./MyLocation";
 
 const Landing = () => {
    const navigate = useNavigate();
    // const findLocation = () => {
    //    navigate("/my_location");
    // };
+   const getLocations = async () =>{
+    const coords = await MyLocation();
+    console.log(coords)
+  }
    const searchHospital = () => {
       navigate("/search_hospital");
    };
