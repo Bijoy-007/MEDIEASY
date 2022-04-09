@@ -3,12 +3,11 @@ import { useNavigate } from "react-router-dom";
 import SearchHospitals from "./SearchHospitals";
 import classes from "./Landing.module.css";
 import Feature from "./Feature";
+import Footer from "./Footer";
 
 const Landing = () => {
    const navigate = useNavigate();
-   // const findLocation = () => {
-   //    navigate("/my_location");
-   // };
+
    const searchHospital = () => {
       navigate("/search_hospital");
    };
@@ -27,6 +26,7 @@ const Landing = () => {
             </Col>
          </Row>
          <Feature />
+         <Footer />
       </Container>
    );
 };

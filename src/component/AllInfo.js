@@ -1,7 +1,7 @@
 import { Container, Row, Col, ListGroup, ListGroupItem } from "react-bootstrap";
 
 const AllInfo = (props) => {
-   const { placeId, detail } = props.onData;
+   const { detail } = props.onData;
 
    const operations = detail?.availableOperations
       ? detail?.availableOperations
