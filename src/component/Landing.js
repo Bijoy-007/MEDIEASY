@@ -1,6 +1,8 @@
 import { Button, Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import SearchHospitals from "./SearchHospitals";
+import classes from "./Landing.module.css";
+import Feature from "./Feature";
 
 const Landing = () => {
    const navigate = useNavigate();
@@ -12,29 +14,19 @@ const Landing = () => {
    };
 
    return (
-      <Container
-         style={{
-            minWidth: "100vh",
-            minHeight: "100vh",
-            padding: "0",
-            margin: "0",
-            background: "linear-gradient(to right, #96DEDA, #50C9C3)",
-         }}
-      >
+      <Container className={classes.contain}>
          <Row style={{ display: "flex" }}>
-            <Col sm={8}>
+            <Col className={classes.searchBar} sm={8}>
                <SearchHospitals />
+               {/* <Button style={{ margin: "5px" }} variant="success"></Button> */}
             </Col>
-            <Col sm={4}>
-               <Button
-                  style={{ justifyContent: "center", alignItems: "center" }}
-                  variant="info"
-                  onClick={searchHospital}
-               >
-                  Seach Near by Place
+            <Col style={{ textAlign: "center", margin: "10% 0" }} st sm={4}>
+               <Button variant="success" onClick={searchHospital}>
+                  Allow Location
                </Button>
             </Col>
          </Row>
+         <Feature />
       </Container>
    );
 };
