@@ -4,9 +4,7 @@ const Layout = (props) => {
    return (
       <>
          <Navbar />
-         <div style={{ border: "2px solid blue", padding: "0" }}>
-            {props.children}
-         </div>
+         <div>{props.children}</div>
       </>
    );
 };

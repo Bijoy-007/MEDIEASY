@@ -4,9 +4,9 @@ import { http } from "../helper/Http";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { ListGroup } from "react-bootstrap";
-import Loading from "../component/Loading";
+import Loading from "./Loading";
 
-const SearchNearBy = () => {
+const SearchHospitals = () => {
    const [query, setQuery] = useState("");
    const [result, setResult] = useState([]);
    const [isLoading, setIsLoading] = useState(false);
@@ -63,4 +63,4 @@ const SearchNearBy = () => {
    );
 };
 
-export default SearchNearBy;
+export default SearchHospitals;

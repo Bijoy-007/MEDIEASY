@@ -1,14 +1,14 @@
 import { Button, Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-// import landingImg from "../assets/hospital-bg.jpg";
+import SearchHospitals from "./SearchHospitals";
 
 const Landing = () => {
    const navigate = useNavigate();
    const findLocation = () => {
-      navigate("/my-location");
+      navigate("/my_location");
    };
-   const searchNearBy = () => {
-      navigate("/search-nearby");
+   const searchHospital = () => {
+      navigate("/search_hospital");
    };
 
    return (
@@ -24,19 +24,13 @@ const Landing = () => {
       >
          <Row style={{ display: "flex" }}>
             <Col style={{}} sm={8}>
-               <Button
-                  style={{ justifyContent: "center", alignItems: "center" }}
-                  variant="info"
-                  onClick={findLocation}
-               >
-                  Find My Location
-               </Button>
+               <SearchHospitals />
             </Col>
             <Col sm={4}>
                <Button
                   style={{ justifyContent: "center", alignItems: "center" }}
                   variant="info"
-                  onClick={searchNearBy}
+                  onClick={searchHospital}
                >
                   Seach Near by Place
                </Button>
