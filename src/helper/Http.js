@@ -16,4 +16,8 @@ const http = async (endPoint, body) => {
    return axios.post(`${apis.baseUrl}${endPoint}`, body);
 };
 
-export { postWithToken, http };
+const httpGet = async (endPoint) => {
+   return axios.get(`${apis.baseUrl}${endPoint}`);
+};
+
+export { postWithToken, http, httpGet };

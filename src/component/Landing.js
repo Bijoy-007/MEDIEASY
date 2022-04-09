@@ -4,9 +4,9 @@ import SearchHospitals from "./SearchHospitals";
 
 const Landing = () => {
    const navigate = useNavigate();
-   const findLocation = () => {
-      navigate("/my_location");
-   };
+   // const findLocation = () => {
+   //    navigate("/my_location");
+   // };
    const searchHospital = () => {
       navigate("/search_hospital");
    };
@@ -18,12 +18,11 @@ const Landing = () => {
             minHeight: "100vh",
             padding: "0",
             margin: "0",
-            border: "2px solid black",
             background: "linear-gradient(to right, #96DEDA, #50C9C3)",
          }}
       >
          <Row style={{ display: "flex" }}>
-            <Col style={{}} sm={8}>
+            <Col sm={8}>
                <SearchHospitals />
             </Col>
             <Col sm={4}>
