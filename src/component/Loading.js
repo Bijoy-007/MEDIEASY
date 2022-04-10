@@ -6,12 +6,10 @@ const Loading = () => {
          <div
             style={{
                margin: "10%",
-               diplay: "flex",
-               justifyContent: "center",
-               alignItems: "center",
+               textAlign: "center"
             }}
          >
-            <Spinner animation="border" />
+            <Spinner animation="border" size ='xl' />
          </div>
       </>
    );

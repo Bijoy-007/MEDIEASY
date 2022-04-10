@@ -4,13 +4,17 @@ import SearchHospitals from "./SearchHospitals";
 import classes from "./Landing.module.css";
 import Feature from "./Feature";
 
+
 const Landing = () => {
   const navigate = useNavigate();
-
-  const searchHospital = () => {
-    navigate("/search_hospital");
-  };
-
+  const findLocation = async () => {
+   navigator.geolocation.getCurrentPosition((position) => {
+     console.log(position.coords.latitude);
+     navigate(`/my_location/${position.coords.latitude}/${position.coords.longitude}`);
+   });
+ };
+  
+  
   return (
     <div id="home" className={classes["section-wrapper"]}>
       <div className={classes.contain}>
@@ -36,7 +40,7 @@ const Landing = () => {
               <Button
                 className={classes["location-btn"]}
                 variant="success"
-                onClick={searchHospital}
+                onClick={findLocation}
               >
                 Detect by location
               </Button>

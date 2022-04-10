@@ -23,6 +23,7 @@ const DetailsPage = () => {
          if (!res.data.status) {
             setDetails(null);
          }
+         
          if (!res.data.data) {
             navigate("/404");
          }
