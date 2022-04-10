@@ -32,31 +32,37 @@ const SearchHospitals = () => {
    const filterBy = () => true;
 
    return (
-      <AsyncTypeahead
-         filterBy={filterBy}
-         id="search-hospital"
-         isLoading={isLoading}
-         labelKey="display_name"
-         onChange={selectHandler}
-         minLength={3}
-         onSearch={handleSearch}
-         options={options}
-         placeholder="Search for a Hospital ..."
-         renderMenuItemChildren={(data, props) => (
-            <Fragment>
-               <img
-                  alt={data.display_name}
-                  src={data.icon}
-                  style={{
-                     height: "24px",
-                     marginRight: "10px",
-                     width: "24px",
-                  }}
-               />
-               <span>{data.display_name}</span>
-            </Fragment>
-         )}
-      />
+      <div
+         style={{
+            padding: "2rem",
+         }}
+      >
+         <AsyncTypeahead
+            filterBy={filterBy}
+            id="search-hospital"
+            isLoading={isLoading}
+            labelKey="display_name"
+            onChange={selectHandler}
+            minLength={3}
+            onSearch={handleSearch}
+            options={options}
+            placeholder="Search for a Hospital ..."
+            renderMenuItemChildren={(data, props) => (
+               <Fragment>
+                  <img
+                     alt={data.display_name}
+                     src={data.icon}
+                     style={{
+                        height: "24px",
+                        marginRight: "10px",
+                        width: "24px",
+                     }}
+                  />
+                  <span>{data.display_name}</span>
+               </Fragment>
+            )}
+         />
+      </div>
    );
 };
 
