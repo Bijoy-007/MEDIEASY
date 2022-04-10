@@ -9,7 +9,10 @@ const AllInfo = (props) => {
 
    return (
       <>
-         <Container fluid="sm" style={{ margin: "7%" }}>
+         <Container
+            fluid="lg"
+            style={{ margin: "2%", backgroundColor: "White" }}
+         >
             <h1>{detail?.hospitalName}</h1>
             <Row style={{ margin: "2%" }}>
                <Col>Contact NO - {detail?.hospitalNumber}</Col>

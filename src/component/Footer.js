@@ -1,6 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { FaHospitalSymbol } from "react-icons/fa";
-import { Link } from "react-router-dom";
+// import { FaHospitalSymbol } from "react-icons/fa";
 const Footer = () => {
    const date = new Date();
    const year = date.getFullYear();
@@ -15,11 +14,11 @@ const Footer = () => {
       >
          <Row lg={6} style={{ textDecoration: "none" }}>
             <Col md={6}>
-               <Link to="/">Home</Link>
+               <a href="/">Home</a>
             </Col>
 
             <Col md={6}>
-               <Link to="/">Admin Portal</Link>
+               <a href="https://medieasy-hospital.netlify.app/">Admin Portal</a>
             </Col>
          </Row>
          <p>Copyright@{year}</p>
