@@ -24,8 +24,9 @@ const SearchHospitals = () => {
    };
 
    const selectHandler = async (data) => {
-      const placeId = data[0].place_id;
-      navigate(`/hostpital_details/${placeId}`);
+      const placeId = data[0].osm_id;
+      const name = data[0].display_name;
+      navigate(`/hostpital_details/${placeId}?name=${name}`);
    };
 
    const filterBy = () => true;

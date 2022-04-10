@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Detail from "../pages/Details";
+import NotFound from "../pages/404";
 
 const AllRoutes = () => {
    return (
@@ -9,6 +10,7 @@ const AllRoutes = () => {
             <Routes>
                <Route path="/" element={<Home />} />
                <Route path="/hostpital_details/:placeId" element={<Detail />} />
+               <Route path="/404" element={<NotFound />} />
             </Routes>
          </BrowserRouter>
       </>
