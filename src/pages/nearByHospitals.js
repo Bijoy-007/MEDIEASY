@@ -2,6 +2,8 @@ import { useState, Fragment , useEffect, useReducer} from "react";
 import { useParams } from "react-router-dom";
 import { http } from "../helper/Http";
 import apis from "../helper/Apis";
+import Layout from "../layout/Layout";
+import { Col, Container ,Row} from "react-bootstrap";
 
 const NearByHospitals = () =>{
   const {lat, long} = useParams();
@@ -26,9 +28,25 @@ const NearByHospitals = () =>{
   },[lat,long])
   console.log(details);
   return (
-    <>
-    hello
-    </>
+    <Layout>
+      <Container
+      style={{
+        marginTop:'30px'
+      }}
+       >
+         <Row>
+           <h1>See your NearBY Hospitals ....</h1>
+         </Row>
+        <Row>
+          <Col sm={4}>
+ 
+          </Col>
+          <Col sm={8}>
+dsfsdfdsf
+          </Col>
+        </Row>
+      </Container>
+    </Layout>
   )
 }
 

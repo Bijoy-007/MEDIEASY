@@ -3,11 +3,9 @@ import { useNavigate } from "react-router-dom";
 import SearchHospitals from "./SearchHospitals";
 import classes from "./Landing.module.css";
 import Feature from "./Feature";
-import MyLocation from "./MyLocation";
-import { useEffect, useState } from "react";
+import Footer from "./Footer";
+
 const Landing = () => {
-  const [lat, satLat] = useState(0);
-  const [long, setLong] = useState(0);
   const navigate = useNavigate();
   const findLocation = async () => {
    navigator.geolocation.getCurrentPosition((position) => {
@@ -15,26 +13,28 @@ const Landing = () => {
      navigate(`/my_location/${position.coords.latitude}/${position.coords.longitude}`);
    });
  };
+  
+   const searchHospital = () => {
+      navigate("/search_hospital");
+   };
 
-  const searchHospital = () => {
-    navigate("/search_hospital");
-  };
-
-  return (
-    <Container className={classes.contain}>
-      <Row>
-        <Col className={classes.searchBar} sm={8}>
-          <SearchHospitals />
-        </Col>
-        <Col style={{ textAlign: "center", margin: "10% 0" }} st sm={4}>
-          <Button variant="success" onClick={findLocation}>
-            Allow Location
-          </Button>
-        </Col>
-      </Row>
-      <Feature />
-    </Container>
-  );
+   return (
+      <Container className={classes.contain}>
+         <Row style={{ display: "flex" }}>
+            <Col className={classes.searchBar} sm={8}>
+               <SearchHospitals />
+               {/* <Button style={{ margin: "5px" }} variant="success"></Button> */}
+            </Col>
+            <Col style={{ textAlign: "center", margin: "10% 0" }} st sm={4}>
+               <Button variant="success" onClick={findLocation}>
+                  Allow Location
+               </Button>
+            </Col>
+         </Row>
+         <Feature />
+         <Footer />
+      </Container>
+   );
 };
 
 export default Landing;

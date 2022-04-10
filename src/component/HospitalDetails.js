@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { httpGet } from "../helper/Http";
-import Loading from "../component/Loading";
+import Loading from "./Loading";
 import apis from "../helper/Apis";
-import AllInfo from "../component/AllInfo";
+import AllInfo from "./AllInfo";
 
 const DetailsPage = () => {
    const { placeId } = useParams();
