@@ -14,10 +14,7 @@ const Landing = () => {
    });
  };
   
-   const searchHospital = () => {
-      navigate("/search_hospital");
-   };
-
+  
   return (
     <div id="home" className={classes["section-wrapper"]}>
       <div className={classes.contain}>

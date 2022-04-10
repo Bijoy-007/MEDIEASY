@@ -46,7 +46,7 @@ const NearByHospitals = () => {
         }}
       >
         <Row>
-          <h1>See your Nearest Hospitals ....</h1>
+          <h1>Your Nearest Hospitals</h1>
           <Dropdown
             onSelect={(value) => {
               console.log(value)
@@ -54,12 +54,12 @@ const NearByHospitals = () => {
             }}
           >
             <Dropdown.Toggle variant="success" id="dropdown-basic">
-              Dropdown Button
+              Select radius
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item eventKey={0}>5</Dropdown.Item>
-              <Dropdown.Item eventKey={1}>10</Dropdown.Item>
-              <Dropdown.Item evenKey={2}>15</Dropdown.Item>
+              <Dropdown.Item eventKey={0}>5 km</Dropdown.Item>
+              <Dropdown.Item eventKey={1}>10 km</Dropdown.Item>
+              <Dropdown.Item evenKey={2}>15 km</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <hr></hr>
