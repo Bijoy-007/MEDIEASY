@@ -4,6 +4,7 @@ import DetailsPage from "../pages/Details";
 import NearByHospitals from "../pages/nearByHospitals";
 
 import Detail from "../pages/Details";
+import NotFound from "../pages/404";
 
 const AllRoutes = () => {
    return (
@@ -20,6 +21,7 @@ const AllRoutes = () => {
                   element={<NearByHospitals/>}
                />
                <Route path="/hostpital_details/:placeId" element={<Detail />} />
+               <Route path="/404" element={<NotFound />} />
             </Routes>
          </BrowserRouter>
       </>

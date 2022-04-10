@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { httpGet } from "../helper/Http";
 import Loading from "./Loading";
 import apis from "../helper/Apis";
@@ -9,6 +9,10 @@ const DetailsPage = () => {
    const { placeId } = useParams();
    const [isLoading, setIsLoading] = useState(false);
    const [detail, setDetails] = useState(null);
+   let [searchParams] = useSearchParams();
+   const navigate = useNavigate();
+
+   const name = searchParams.get("name");
 
    useEffect(() => {
       const fetchDeatails = async () => {
@@ -19,14 +23,21 @@ const DetailsPage = () => {
          if (!res.data.status) {
             setDetails(null);
          }
+         if (!res.data.data) {
+            navigate("/404");
+         }
          setDetails(res.data.data);
          setIsLoading(false);
       };
       fetchDeatails();
+      // eslint-disable-next-line
    }, [placeId]);
 
    return (
-      <>{isLoading ? <Loading /> : <AllInfo onData={{ placeId, detail }} />};</>
+      <>
+         {isLoading && <Loading />}
+         {detail && <AllInfo onData={{ placeId, detail, name }} />}
+      </>
    );
 };
 export default DetailsPage;
