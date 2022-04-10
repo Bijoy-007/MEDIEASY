@@ -190,12 +190,6 @@ Google Maps Api key required Free Billing Account to use, which required Credit 
 - Live video call with Doctors
 - SOS for Quick Response
 
-##
-
-##
-
-##
-
 ## Contributers
 
 - [Aritra Sen](https://github.com/aritrasen12345)
