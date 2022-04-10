@@ -111,13 +111,14 @@ const AllInfo = (props) => {
                   <h5>Beds types</h5>
                   {detail?.beds && (
                      <p>
-                        {detail?.blood.map((ele) => (
+                        {detail?.beds.map((ele, ind) => (
                            <Badge
                               style={{ padding: "1% 3%", margin: "auto 2%" }}
                               size="lg"
                               bg="success"
+                              key={ind}
                            >
-                              {ele}
+                              {ele.type} = {ele.vacancy}
                            </Badge>
                         ))}
                      </p>
@@ -128,11 +129,12 @@ const AllInfo = (props) => {
                   <h5>Blood Types</h5>
                   {detail?.blood && (
                      <p>
-                        {detail?.blood.map((ele) => (
+                        {detail?.blood.map((ele, ind) => (
                            <Badge
                               style={{ padding: "1% 3%", margin: "auto 2%" }}
                               size="lg"
                               bg="success"
+                              key={ind}
                            >
                               {ele}
                            </Badge>
