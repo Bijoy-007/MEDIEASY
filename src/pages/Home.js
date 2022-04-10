@@ -1,11 +1,14 @@
+import Landing from "../component/Landing";
 import Layout from "../layout/Layout";
 
 const Home = () => {
-  return (
-    <>
-      <Layout>This is home page</Layout>
-    </>
-  );
+   return (
+      <>
+         <Layout>
+            <Landing />
+         </Layout>
+      </>
+   );
 };
 
 export default Home;
