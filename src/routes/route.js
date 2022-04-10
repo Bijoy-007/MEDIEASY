@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import DetailsPage from "../pages/HospitalDetails";
+import NearByHospitals from "../pages/nearByHospitals";
+
 
 const AllRoutes = () => {
    return (
@@ -11,6 +13,10 @@ const AllRoutes = () => {
                <Route
                   path="/hostpital_details/:placeId"
                   element={<DetailsPage />}
+               />
+               <Route
+                  path="/my_location/:lat/:long"
+                  element={<NearByHospitals/>}
                />
             </Routes>
          </BrowserRouter>

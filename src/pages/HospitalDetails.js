@@ -14,7 +14,7 @@ const DetailsPage = () => {
       const fetchDeatails = async () => {
          setIsLoading(true);
          const res = await httpGet(
-            `${apis.GET_HOSPITAL_BY_PLACEID}/${110410969}`
+            `${apis.GET_HOSPITAL_BY_PLACEID}/${placeId}`
          );
          if (!res.data.status) {
             setDetails(null);
