@@ -1,0 +1,14 @@
+.wrapper {
+  margin: 0;
+  background-color: #faf6fd;
+  margin-bottom: -2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #252526;
+  padding: 1rem;
+}
