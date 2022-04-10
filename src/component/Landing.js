@@ -1,4 +1,4 @@
-import { Button, Container, Row, Col, Card } from "react-bootstrap";
+import { Button, Row, Col, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import SearchHospitals from "./SearchHospitals";
 import classes from "./Landing.module.css";

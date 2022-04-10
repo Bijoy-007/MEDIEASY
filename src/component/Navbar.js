@@ -1,4 +1,4 @@
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
 const GeneralNavbar = () => {
   return (
