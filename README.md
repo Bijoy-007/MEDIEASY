@@ -62,7 +62,11 @@ Let us consider Patient P who lives in a small town. He has a heart attack. Ther
 
 ## MEDIEASY Web Application
 
-![image (4)](https://user-images.githubusercontent.com/71816694/162626802-e55b5ae1-a7cd-421a-a23f-615b8b88e757.png)
+<!-- ![image (4)](https://user-images.githubusercontent.com/71816694/162626802-e55b5ae1-a7cd-421a-a23f-615b8b88e757.png) -->
+![WhatsApp Image 2022-04-10 at 9 26 49 PM (1)](https://user-images.githubusercontent.com/71816694/162628518-18fbe125-e90f-4f04-ac23-3ab80a77ec71.png)
+![WhatsApp Image 2022-04-10 at 9 26 49 PM (2)](https://user-images.githubusercontent.com/71816694/162628521-b416bae3-ebbd-4df3-b3c8-036a2ff30797.png)
+![WhatsApp Image 2022-04-10 at 9 26 49 PM](https://user-images.githubusercontent.com/71816694/162628523-9d42d123-9385-431a-b7a8-4c87b9b40fd6.png)
+
 
 ## MEDIEASY Admin Web Application(For Hospital Officials)
 
